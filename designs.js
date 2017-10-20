@@ -15,6 +15,11 @@ $('#sizePicker').submit( event => {
     addCellClickListener();
 })
 
+/**
+ * Make height x width grid
+ * @param {Number} height
+ * @param {Number} width
+ */
 function makeGrid(height, width) {
     for(let i=0; i < height; i++) {
         $tableElement.append('<tr></tr>');
@@ -25,6 +30,7 @@ function makeGrid(height, width) {
     }
 }
 
+//Add Click Listener so that when we click cell in grid, the cell color changes
 function addCellClickListener() {
     $('td').click( event => {
         let color = $colorPicker.val();
